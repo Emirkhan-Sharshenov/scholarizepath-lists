@@ -1,0 +1,110 @@
+:root{
+  --brand:#0058bd;
+  --brand-lit:#1372e0;
+  --brand-deep:#003d86;
+  --navy:#000139;
+  --surface:#f6f7fb;
+  --line:#e3e8f2;
+  --tint:#eaf2fd;
+  --ink:#171717;
+  --dim:#5a6478;
+  --bg:#ffffff;
+  --panel:#ffffff;
+  --gold:#a86b00;
+  --green:#12855a;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --brand:#6aa6ff;
+    --navy:#cfe0ff;
+    --surface:#121727;
+    --line:#242c42;
+    --tint:#16213c;
+    --ink:#e9edf7;
+    --dim:#98a2ba;
+    --bg:#0a0d1a;
+    --panel:#121727;
+    --gold:#ffc53d;
+    --green:#3ddc9a;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Geist",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  line-height:1.6;font-size:16px;padding-inline:20px;padding-block:0 72px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:760px;margin-inline:auto}
+
+header.top{
+  margin-inline:-20px;padding:26px 20px 34px;
+  background:radial-gradient(130% 120% at 50% 0%, var(--brand-lit) 0%, var(--brand) 48%, var(--brand-deep) 100%);
+  color:#fff;
+}
+header.top .inner{max-width:760px;margin-inline:auto}
+.lock{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;letter-spacing:-.2px}
+.lock img{height:30px;width:auto;filter:brightness(0) invert(1)}
+h1{font-size:clamp(28px,7vw,40px);line-height:1.05;font-weight:900;letter-spacing:-1.4px;margin:22px 0 0;text-wrap:balance}
+header.top p{margin:12px 0 0;font-size:17px;opacity:.92;max-width:52ch}
+.checked{
+  display:inline-block;margin-top:18px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  background:rgba(255,255,255,.16);border-radius:999px;padding:7px 13px;
+}
+
+nav.back{margin-top:22px;font-size:14px}
+nav.back a{color:var(--brand);text-decoration:none;font-weight:600}
+nav.back a:hover{text-decoration:underline}
+
+h2{font-size:22px;font-weight:800;letter-spacing:-.6px;margin:38px 0 6px;text-wrap:balance}
+.note{color:var(--dim);font-size:15px;margin:0 0 18px}
+
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  padding:20px;margin-bottom:14px;
+}
+.card h3{margin:0;font-size:19px;font-weight:800;letter-spacing:-.4px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.flag{
+  font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--brand);
+  background:var(--tint);border-radius:6px;padding:5px 8px;
+}
+.when{
+  display:inline-block;margin-top:12px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:14px;font-weight:600;color:var(--green);background:var(--surface);
+  border:1px solid var(--line);border-radius:9px;padding:8px 12px;
+}
+.card p{margin:12px 0 0;font-size:15px;color:var(--dim)}
+.card a.src{display:inline-block;margin-top:14px;font-size:14px;font-weight:600;color:var(--brand)}
+
+ul.plain{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+ul.plain li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:9px 13px;font-size:15px;font-weight:600}
+
+ol.steps{padding-left:20px;margin:0}
+ol.steps li{margin-bottom:10px;font-size:15.5px}
+
+.warn{
+  background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--gold);
+  border-radius:12px;padding:16px 18px;font-size:15px;color:var(--dim);margin:24px 0;
+}
+.warn b{color:var(--ink)}
+
+.cta{
+  display:block;margin-top:34px;text-align:center;text-decoration:none;
+  background:var(--brand);color:#fff;border-radius:16px;padding:22px 24px;
+}
+.cta b{display:block;font-size:20px;font-weight:900;letter-spacing:-.5px}
+.cta span{display:block;margin-top:6px;font-size:15px;opacity:.9}
+
+.hub{display:grid;gap:14px;margin-top:8px}
+a.tile{
+  display:block;text-decoration:none;color:inherit;background:var(--panel);
+  border:1px solid var(--line);border-radius:16px;padding:20px;
+}
+a.tile:hover{border-color:var(--brand)}
+a.tile .k{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand)}
+a.tile h3{margin:8px 0 0;font-size:20px;font-weight:800;letter-spacing:-.5px}
+a.tile p{margin:8px 0 0;font-size:15px;color:var(--dim)}
+
+footer{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);color:var(--dim);font-size:13.5px}
+footer a{color:var(--brand)}
